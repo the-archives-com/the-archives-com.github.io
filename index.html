@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Cabin in the Woods</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>The Cabin in the Woods</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="books/index.html">The Bookshelf</a>
+    <a href="recipes/index.html">The Kitchen Table</a>
+    <a href="places/index.html">The Photo Album</a>
+    <a href="music/index.html">The Wireless</a>
+  </nav>
+</header>
+
+<main>
+    <div class="slideshow">
+        <img src="photos/photo1.jpg" class="slide active">
+        <img src="photos/photo2.jpg" class="slide">
+        <img src="photos/photo3.jpg" class="slide">
+      </div>
+
+<div class="card">
+  <h2>Welcome</h2>
+  <p>This is your living journal. Trips, books, meals, and quiet upgrades to life.</p>
+</div>
+
+<div class="card">
+  <h2>The Bookshelf</h2>
+  <p><a href="books/index.html">Go to books →</a></p>
+</div>
+
+<div class="card">
+  <2h2>The Kitchen Table</h>
+  <p><a href="recipes/index.html">Go to recipes →</a></p>
+</div>
+
+<div class="card">
+    <h2>The Photo Album</h>>
+<a href="index.html">Go to places</a>
+
+<div class="card">
+    <h2>The Wireless</h>>
+<a href="index.html">Go to music</a>
+
+</main>
+
+<footer>
+  The Cabin in the Woods
+</footer>
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let current = 0;
+  
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 4000); // change every 4 seconds
+  </script>
+  
+</body>
+</html>

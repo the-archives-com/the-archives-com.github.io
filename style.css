@@ -1,0 +1,318 @@
+:root {
+  --tan: #f3eadf;
+  --ink: #1f2f3f;
+  --burgundy: #5a1f24;
+  --paper: #fffaf3;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 350px;
+  margin: 0 auto 30px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Libre Baskerville", Georgia, serif;
+  background: var(--tan);
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--ink);
+  color: var(--tan);
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 4px solid var(--burgundy);
+}
+
+header h1 { margin: 0; font-family: "Cinzel", serif; letter-spacing: 1px; }
+
+nav a { color: var(--tan); margin: 0 10px; text-decoration: none; }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.card {
+  background: var(--paper);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+h1, h2, h3 { font-family: "Cinzel", serif; color: var(--ink); }
+
+h2 { border-bottom: 2px solid var(--burgundy); padding-bottom: 6px; }
+
+a { color: var(--burgundy); }
+
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  padding: 40px 20px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+
+.rating {
+  font-size: 1.4em;
+  color: #b45309; /* warm gold */
+  letter-spacing: 2px;
+
+
+}
+
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.recipe-table th {
+  text-align: left;
+  color: var(--ink);
+}
+
+
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;   /* space from title */
+}
+
+.recipe-table td:first-child {
+  padding-left: 6px;  /* subtle indent for names */
+}
+
+
+
+.book-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.book-text {
+  flex: 1; /* takes all left space */
+}
+
+.book-cover {
+  width: 140px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.book-table th,
+.book-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.book-table th {
+  text-align: left;
+  color: var(--ink);
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;   /* space from title */
+}
+
+.book-table td:first-child {
+  padding-left: 6px;  /* subtle indent for names */
+}
+
+.book-hero {
+  display: flex;
+  align-items: flex-start;
+}
+
+.book-hero-text {
+  flex: 1;  /* this forces image to far right */
+}
+
+.book-hero-cover {
+  width: 140px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.place-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.place-caption {
+  font-style: italic;
+  color: #555;
+}
+
+.places-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.places-table th,
+.places-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.places-table th {
+  text-align: left;
+  color: var(--ink);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.map-embed {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.place-card {
+  display: block;
+  padding: 20px;
+  border-radius: 16px;
+  background: #1e2a24;
+  color: #f5f1e8;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-3px);
+}
+
+
+.place-card {
+  display: block;
+  padding: 20px;
+  border-radius: 16px;
+  background: #1e2a24;
+  color: #f5f1e8;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-3px);
+}
+
+.featured-photos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.featured-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.featured-photos img:first-child {
+  grid-row: span 2;
+}
+
+.media-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.media-text {
+  flex: 1;
+}
+
+.media-cover img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background: #2f3f37;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 4px;
+  font-size: 0.85em;
+}
+
+
+
