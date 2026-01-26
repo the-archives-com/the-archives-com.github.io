@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Packing Checklist</title>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background: #f4f1eb;
+    color: #2e2a25;
+  }
+
+  header {
+    text-align: center;
+    padding: 16px;
+    background: #3a332b;
+    color: #f5f0e8;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  h2 {
+    margin-top: 28px;
+    border-bottom: 2px solid #cbbfae;
+    padding-bottom: 6px;
+    letter-spacing: 0.08em;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd2c2;
+    font-size: 1.05rem;
+  }
+
+  .item input {
+    width: 26px;
+    height: 26px;
+    margin-right: 14px;
+  }
+
+  .item.checked {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+
+  .ready-container {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .ready-button {
+    font-size: 1.4rem;
+    padding: 16px 28px;
+    border-radius: 8px;
+    border: none;
+    background: #888;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  .ready-button.ready {
+    background: #2f7d32;
+    box-shadow: 0 0 10px rgba(47,125,50,0.5);
+  }
+
+  .footer-note {
+    text-align: center;
+    opacity: 0.6;
+    margin: 40px 0 20px;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>PACKING CHECKLIST</header>
+
+<div class="container">
+
+  <h2>Sleep Resources</h2>
+  <div class="item"><input type="checkbox">Tent with tent poles</div>
+  <div class="item"><input type="checkbox">Sleeping bag</div>
+  <div class="item"><input type="checkbox">Inflatable mattress</div>
+  <div class="item"><input type="checkbox">Pillow</div>
+
+  <h2>Food Resources</h2>
+  <div class="item"><input type="checkbox">Trangia</div>
+  <div class="item"><input type="checkbox">Dinner</div>
+  <div class="item"><input type="checkbox">Lunch</div>
+  <div class="item"><input type="checkbox">Breakfast</div>
+  <div class="item"><input type="checkbox">Coffee</div>
+  <div class="item"><input type="checkbox">Milk powder</div>
+  <div class="item"><input type="checkbox">Sugar</div>
+  <div class="item"><input type="checkbox">Tea Bags</div>
+  <div class="item"><input type="checkbox">Snacks</div>
+
+  <h2>Water Resources</h2>
+  <div class="item"><input type="checkbox">Water bladder</div>
+  <div class="item"><input type="checkbox">Water filter</div>
+  <div class="item"><input type="checkbox">Water bottle</div>
+  <div class="item"><input type="checkbox">Cup</div>
+
+  <h2>Fire Resources</h2>
+  <div class="item"><input type="checkbox">Magnifying glass</div>
+  <div class="item"><input type="checkbox">Lighters x2</div>
+  <div class="item"><input type="checkbox">Tinder</div>
+  <div class="item"><input type="checkbox">Methylated spirits</div>
+
+  <div class="ready-container">
+    <button id="readyButton" class="ready-button">❌ Not Ready</button>
+  </div>
+
+  <div class="footer-note">
+    State is saved on this device.
+  </div>
+
+</div>
+
+<script>
+  const items = document.querySelectorAll(".item");
+  const checkboxes = document.querySelectorAll("input[type=checkbox]");
+  const readyButton = document.getElementById("readyButton");
+
+  // Load saved state
+  checkboxes.forEach((cb, i) => {
+    const saved = localStorage.getItem("check_" + i);
+    if (saved === "true") cb.checked = true;
+  });
+
+  function updateUI() {
+    let allChecked = true;
+
+    checkboxes.forEach((cb, i) => {
+      localStorage.setItem("check_" + i, cb.checked);
+      const item = cb.parentElement;
+      if (cb.checked) {
+        item.classList.add("checked");
+      } else {
+        item.classList.remove("checked");
+        allChecked = false;
+      }
+    });
+
+    if (allChecked) {
+      readyButton.textContent = "✅ Ready To Go";
+      readyButton.classList.add("ready");
+    } else {
+      readyButton.textContent = "❌ Not Ready";
+      readyButton.classList.remove("ready");
+    }
+  }
+
+  checkboxes.forEach(cb => cb.addEventListener("change", updateUI));
+
+  updateUI();
+</script>
+
+</body>
+</html>
