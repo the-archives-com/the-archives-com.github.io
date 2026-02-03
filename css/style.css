@@ -1,0 +1,351 @@
+/* =========================================================
+   THE ARCHIVES — MASTER STYLESHEET v1.0
+   Single source of truth for all pages & themes
+   ========================================================= */
+
+/* -------------------------
+   RESET & BASE
+------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  background: #f3f0e8;
+  color: #2b2b2b;
+}
+
+/* -------------------------
+   HEADER
+------------------------- */
+
+.site-header {
+  text-align: center;
+  padding: 32px 16px 20px 16px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 24px;
+}
+
+.site-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.site-nav-centered {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  justify-content: center;
+}
+
+.site-nav-centered a {
+  text-decoration: none;
+  color: #6b5a45;   /* lighter, warmer */
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.site-nav-centered a:hover {
+  text-decoration: underline;
+}
+
+.site-nav-centered a {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.site-title {
+  grid-column: 2;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-nav {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  gap: 16px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: ##7a6a55;
+  font-size: 14px;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------
+   PAGE CONTAINER
+------------------------- */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.page-title {
+  text-align: center;
+  margin: 24px 0 32px;
+  letter-spacing: 0.1em;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* -------------------------
+   CARD GRID
+------------------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* -------------------------
+   CARDS
+------------------------- */
+.card {
+  display: block;
+  background: #f3efe6;
+  border: 1px solid #cbbfae;
+  border-radius: 6px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.card-meta {
+  font-size: 13px;
+  color: #666;
+}
+
+/* =========================
+   ARCHIVE TABLES (Recipes, Books, Music, Places)
+========================= */
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 0.95rem;
+}
+
+.archive-table thead {
+  background: #e9e2d6;
+}
+
+.archive-table th {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 2px solid #b8aa96;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-variant: small-caps;
+}
+
+.archive-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #cfc3b2;
+  vertical-align: top;
+}
+
+/* Row hover */
+.archive-table tbody tr:hover {
+  background: #f7f3ec;
+}
+
+/* Links inside tables */
+.archive-table a {
+  color: #5f5242;
+  text-decoration: none;
+}
+
+.archive-table a:hover {
+  text-decoration: underline;
+}
+
+/* Rating stars column */
+.archive-table .rating {
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  font-family: serif;
+}
+
+/* Status tags (optional) */
+.archive-table .status {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Make first column slightly bolder */
+.archive-table td:first-child {
+  font-weight: 600;
+}
+
+
+/* -------------------------
+   STAR RATING
+------------------------- */
+.stars {
+  color: #b38b2e;
+  font-size: 14px;
+}
+
+/* -------------------------
+   BOOK / MEDIA HERO
+------------------------- */
+.book-hero {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.book-hero-text {
+  flex: 1;
+}
+
+.book-hero-cover {
+  width: 160px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #cfc7bb;
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
+.site-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid #b9b0a3;
+  background: #f6f2ea;
+}
+
+/* =========================
+   CENTERED HEADER NAV
+========================= */
+
+.site-header {
+  text-align: center;
+  padding: 32px 16px 20px 16px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 24px;
+}
+
+.site-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+/* The nav row */
+.site-nav-centered {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  justify-content: center;
+}
+
+/* FORCE all states to be same colour */
+.site-nav-centered a,
+.site-nav-centered a:visited,
+.site-nav-centered a:active {
+  text-decoration: none;
+  color: #8a7a65;           /* warm light parchment brown */
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Hover only changes underline */
+.site-nav-centered a:hover {
+  text-decoration: underline;
+  color: #8a7a65; /* stays same */
+}
+
+
+/* =========================================================
+   THEMES
+   ========================================================= */
+
+/* CABIN */
+body.theme-cabin {
+  background: linear-gradient(90deg, #815438 0%, #3b2a20 15%, #3b2a20 85%, #815438 100%);
+}
+
+body.theme-cabin .site-header,
+body.theme-cabin .site-footer {
+  background: #3b2a20;
+  color: #f3e9dc;
+  border-color: #6d4b36;
+}
+
+body.theme-cabin .card {
+  background: #f4efe6;
+}
+
+/* MUSEUM */
+body.theme-museum {
+  background: #e6ebf0;
+}
+
+body.theme-museum .site-header,
+body.theme-museum .site-footer {
+  background: #f2f5f8;
+  border-color: #c9d2db;
+}
+
+body.theme-museum .card {
+  background: #f4efe6;
+}
+
+/* UTIL */
+.center {
+  text-align: center;
+}
+

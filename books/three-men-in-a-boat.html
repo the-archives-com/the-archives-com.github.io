@@ -2,18 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Book Title – The Bookshelf</title>
+
+
+<!-- ===================================================== -->
+<!-- TOP TAB        Town - State - Date - Atlas            -->
+<!-- ===================================================== -->
+
+<title>Three Men In A Boat - Jerome K. Jerome | the archives</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<header>
-  <h1>The Bookshelf</h1>
-  <nav>
-    <a href="index.html">Back to shelf</a>
-    <a href="../index.html">Home</a>
+
+<!-- ===================================================== -->
+<!--         : Standard Header - USE ALL PAGES             -->
+<!-- ===================================================== -->
+  
+<header class="site-header">
+  <div class="site-title">
+    <a href="../index.html">the archives</a>
+  </div>
+
+  <nav class="site-nav-centered">
+    <a href="../atlas/index.html">atlas</a>
+    <a href="../journals/index.html">journals</a>
+    <a href="../plans/index.html">plans</a>
+    <a href="../books/index.html">books</a>
+    <a href="../photos/index.html">photos</a>
+    <a href="../music/index.html">music</a>
+    <a href="../places/index.html">places</a>
+    <a href="../recipes/index.html">recipes</a>
+    <a href="../equipment/index.html">equipment</a>
+    
   </nav>
 </header>
 
@@ -24,14 +45,17 @@
     <h2>Three Men in a Boat</h2>
     <p><strong>Author:</strong> Jerome K. Jerome</p>
     <div class="rating">★★★★☆</div>
-  </div>
+      <div>Status : Read</div>
+      <div>Year : 1889</div>
+      <div>Genre : Classics</div>
+    </div>
 
-  <img class="book-hero-cover" src="covers/three-men-in-a-boat.jpg" alt="Cover">
+  <img class="book-hero-cover" src="../assets/book-covers/three-men-in-a-boat.jpg" alt="Cover">
 </div>
 
 <div class="card">
   <h3>Notes</h3>
-  <p>I read this last year in early 2025. I don’t remember the exact place, but I remember the feeling of it — it was easy to carry, easy to return to, and easy to live in for a while.
+  <p>I read this last year in early 2025. I don’t remember the exact place, but I remember the feeling of it being easy to live in for a while.
   <p>This one really stuck with me. Just a bunch of guys in olden times, on a boat, having fun and getting into mischief.</p>
     
     <p>It’s light, human, and quietly funny. I really enjoyed it, and it left me with that rare feeling of having spent time somewhere pleasant.</p>
@@ -42,11 +66,37 @@
   <h3>Related places</h3>
 
   <ul>
-    <li><a href="../places/lake-leschenaultia.html">Lake Leschenaultia</a></li>
-    <li><a href="../places/river-camp.html">Quiet river camp</a></li>
+    <li><a href="../places/maylands.html">Maylands</a></li>
   </ul>
 </div>
 </main>
+
+</body>
+</html>
+
+<!-- =================================== -->
+<!--             Footer                  -->
+<!-- =================================== -->
+
+<footer class="site-footer">
+  <p>
+  <a href="../index.html">the archives</a><br>
+  </p>
+</footer>
+  
+  <script>
+      let slides = document.querySelectorAll(".slide");
+      let current = 0;
+    
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 4000); // change every 4 seconds
+    </script>
+    
+  </body>
+  </html>
 
 </body>
 </html>

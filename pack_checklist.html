@@ -74,6 +74,20 @@
     box-shadow: 0 0 10px rgba(47,125,50,0.5);
   }
 
+  .reset-button {
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #b6ab9c;
+  color: #2e2a25;
+  transition: 0.2s;
+}
+
+.reset-button:hover {
+  background: #a89c8b;
+}
+
   .footer-note {
     text-align: center;
     opacity: 0.6;
@@ -88,11 +102,12 @@
 
 <div class="container">
 
-  <h2>Sleep Resources</h2>
+  <h2>Camp Resources</h2>
   <div class="item"><input type="checkbox">Tent with tent poles</div>
   <div class="item"><input type="checkbox">Sleeping bag</div>
   <div class="item"><input type="checkbox">Inflatable mattress</div>
   <div class="item"><input type="checkbox">Pillow</div>
+   <div class="item"><input type="checkbox">Camp stool</div>
 
   <h2>Food Resources</h2>
   <div class="item"><input type="checkbox">Trangia</div>
@@ -117,9 +132,20 @@
   <div class="item"><input type="checkbox">Tinder</div>
   <div class="item"><input type="checkbox">Methylated spirits</div>
 
-  <div class="ready-container">
-    <button id="readyButton" class="ready-button">❌ Not Ready</button>
-  </div>
+  <h2>Hygene Resources</h2>
+  <div class="item"><input type="checkbox">Toilet paper</div>
+  <div class="item"><input type="checkbox">Toothbrush</div>
+  <div class="item"><input type="checkbox">Toothpaste</div>
+  <div class="item"><input type="checkbox">Sunscreen</div>
+  <div class="item"><input type="checkbox">Bug spray</div>
+  <div class="item"><input type="checkbox">First Aid kit</div>
+
+ <div class="ready-container">
+  <button id="readyButton" class="ready-button">❌ Not Ready</button>
+  <br><br>
+  <button id="resetButton" class="reset-button">🔄 Reset Checklist</button>
+</div>
+
 
   <div class="footer-note">
     State is saved on this device.
@@ -164,6 +190,20 @@
   checkboxes.forEach(cb => cb.addEventListener("change", updateUI));
 
   updateUI();
+
+  const resetButton = document.getElementById("resetButton");
+
+resetButton.addEventListener("click", () => {
+  if (!confirm("Reset the entire checklist?")) return;
+
+  checkboxes.forEach((cb, i) => {
+    cb.checked = false;
+    localStorage.removeItem("check_" + i);
+  });
+
+  updateUI();
+});
+
 </script>
 
 </body>

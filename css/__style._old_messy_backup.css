@@ -1,0 +1,590 @@
+:root {
+  --tan: #e6d3b1;
+  --oxford-blue: #0b1d2a;
+  --burgundy: #5a1e1e;
+  --ink: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--tan);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* Header */
+
+header {
+  background: var(--oxford-blue);
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Nav */
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main content */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Recipe card */
+
+.recipe-card {
+  background: #f5e9d6;
+  border: 1px solid #d6c3a3;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Book cover image */
+
+.book-cover {
+  max-width: 200px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5e9d6; /* Tan */
+  color: #1c2a3a; /* Oxford Blue */
+}
+
+header {
+  background: #1c2a3a;
+  color: #f5e9d6;
+  padding: 16px;
+  text-align: center;
+}
+
+header a {
+  color: #f5e9d6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.recipe {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.recipe h1 {
+  margin-top: 0;
+}
+
+.meta {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #f3efe6;
+  border: 1px solid #cbbfae;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,
+}
+
+
+
+
+/* ===== Base layout & typography ===== */
+/* ===== Components (cards, grids, buttons) ===== */
+/* ===== Atlas system ===== */
+/* ===== Recipe system ===== */
+
+/* ===== THEMES ===== */
+body.theme-cabin { ... }
+
+:root {
+    --wood: #3a2a1a;
+    --wood-dark: #2a1c12;
+    --paper: #f4f0e6;
+    --ink: #2b2b2b;
+    --muted: #6b6b6b;
+    --burgundy: #6b2f2f;
+    --shadow: rgba(0,0,0,0.25);
+  }
+
+  
+  .site-header {
+  height: 80px;
+}
+
+.site-header-empty {
+  /* no content, just structure */
+}
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    margin: 0;
+    padding: 0;
+    background:
+      linear-gradient(90deg,
+        #815438 0%,
+        #6b452e 12%,
+        #3a2a1a 30%,
+        #3a2a1a 70%,
+        #6b452e 88%,
+        #815438 100%
+      );
+    color: var(--ink);
+    font-family: "Libre Baskerville", serif;
+  }
+  
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 170px; /* Adjust thickness */
+    background: linear-gradient(
+      180deg,
+      #2a1c12,
+      #3a2a1a
+    );
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: -1;
+  }
+  
+  /* Desk / Room */
+  
+  .desk {
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  
+  .cabin-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--paper);
+  }
+  
+  .cabin-header h1 {
+    font-family: "Cinzel", serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  .subtitle {
+    margin-top: 10px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+  }
+  
+  /* Grid */
+  
+  .desk-grid {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  
+  /* Cards */
+  
+  .desk-card {
+    background:
+      linear-gradient(180deg, #fff, var(--paper));
+    border-radius: 6px;
+    padding: 44px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--ink);
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    box-shadow:
+      0 8px 20px var(--shadow),
+      inset 0 0 0 1px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Paper edge feel */
+  
+  .desk-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    pointer-events: none;
+  }
+  
+  /* Hover = pick up paper */
+  
+  .desk-card:hover {
+    transform: translateY(-6px) rotate(-0.3deg);
+    box-shadow:
+      0 14px 30px rgba(0,0,0,0.35),
+      inset 0 0 0 1px rgba(0,0,0,0.08);
+  }
+  
+  /* Heart (Journals) */
+  
+  .desk-heart {
+    border: 2px solid var(--burgundy);
+    background: linear-gradient(180deg, #fff, #faf6ee);
+    font-size: 1.3rem;
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 700px) {
+    .desk-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+
+body.theme-museum { ... }
+
+
+:root {
+    --wood: #3a2a1a;
+    --wood-dark: #2a1c12;
+    --paper: #f4f0e6;
+    --ink: #2b2b2b;
+    --muted: #6b6b6b;
+    --burgundy: #6b2f2f;
+    --shadow: rgba(0,0,0,0.25);
+  }
+
+  
+  .site-header {
+  height: 80px;
+}
+
+.site-header-empty {
+  /* no content, just structure */
+}
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+
+  /* Museum Hall Theme */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f1ec; /* warm stone */
+  color: #1f2a33;      /* deep navy */
+  font-family: "Libre Baskerville", serif;
+}
+
+.hall {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.hall-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hall-header h1 {
+  font-family: "Cinzel", serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.hall-subtitle {
+  margin-top: 12px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.hall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hall-card {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #7b2d2d; /* burgundy line */
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+  background: rgba(255,255,255,0.4);
+}
+
+.hall-card:hover {
+  background: rgba(255,255,255,0.7);
+  transform: translateY(-2px);
+}
+
+.hall-card h2 {
+  margin: 0 0 8px 0;
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.hall-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.hall-footer {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.hall-footer a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #7b2d2d;
+}
+
+
+  
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 170px; /* Adjust thickness */
+    background: linear-gradient(
+      180deg,
+      #7a1c12,
+      #3a2a1a
+    );
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: -1;
+  }
+  
+  /* Desk / Room */
+  
+  .desk {
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  
+  .cabin-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--paper);
+  }
+  
+  .cabin-header h1 {
+    font-family: "Cinzel", serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  .subtitle {
+    margin-top: 10px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+  }
+  
+  /* Grid */
+  
+  .desk-grid {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  
+  /* Cards */
+  
+  .desk-card {
+    background:
+      linear-gradient(180deg, #fff, var(--paper));
+    border-radius: 6px;
+    padding: 44px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--ink);
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    box-shadow:
+      0 8px 20px var(--shadow),
+      inset 0 0 0 1px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Paper edge feel */
+  
+  .desk-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    pointer-events: none;
+  }
+  
+  /* Hover = pick up paper */
+  
+  .desk-card:hover {
+    transform: translateY(-6px) rotate(-0.3deg);
+    box-shadow:
+      0 14px 30px rgba(0,0,0,0.35),
+      inset 0 0 0 1px rgba(0,0,0,0.08);
+  }
+  
+  /* Heart (Journals) */
+  
+  .desk-heart {
+    border: 2px solid var(--burgundy);
+    background: linear-gradient(180deg, #fff, #faf6ee);
+    font-size: 1.3rem;
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 700px) {
+    .desk-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+
+  /* =========================
+   COOK MODE
+========================= */
+
+body.cook-mode {
+  font-size: 1.25em;
+  background: #fffdf7;
+}
+
+body.cook-mode header,
+body.cook-mode nav,
+body.cook-mode footer {
+  display: none;
+}
+
+body.cook-mode .recipe {
+  max-width: 900px;
+  font-size: 1.2em;
+}
+
+body.cook-mode button {
+  font-size: 1.2em;
+  padding: 12px 20px;
+}
+
+/* Print mode */
+
+@media print {
+  header, nav, footer, button {
+    display: none !important;
+  }
+}
+
+  
+
+
+
+
+
